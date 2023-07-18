@@ -41,7 +41,7 @@ export class TodoController {
   }
 
   @Delete(':id')
-  removeTodo(@Param('íd', ParseIntPipe) id: number) {
+  removeTodo(@Param('id', ParseIntPipe) id: number) {
     this.logger.log('Handing delete request with id' + id + '....');
     return this.todoService.remove(id);
   }
